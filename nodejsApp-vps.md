@@ -39,7 +39,7 @@
    nginx: configuration file /etc/nginx/nginx.conf test is successful
    ```
 
-   - `sudo ln -s /etc/nginx/sites-available/simpleServer /etc/nginx/sites-enabled` - enable your configuration; make a symbolic link
+   - `sudo ln -s /etc/nginx/sites-available/[serverName] /etc/nginx/sites-enabled` - enable your configuration; make a symbolic link
 
    - `sudo systemctl restart nginx` - restart nginx
 
@@ -47,11 +47,11 @@
 
    [Cerbot for ubuntu and nginx](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
 
-99999. Disabling startup system from pm2
+6) Disabling startup system from pm2 (**optional**)
 
-- `pm2 delete [appCode]`
-- `pm2 cleardump`
-- `pm2 save`
+   - `pm2 delete [appCode]`
+   - `pm2 cleardump`
+   - `pm2 save`
 
-  **!** To restart the app again just run it and save the changes in pm2:
-  `pm2 start [mainFile] && pm2 save`
+   **!** To restart the app again just run it and save the changes in pm2:
+   `pm2 start [mainFile] && pm2 save`
