@@ -34,3 +34,7 @@
 5. Update if you want
 
    `sudo apt-get update`
+
+6. Firewall
+
+[Firewall Ubuntu 18](https://hostadvice.com/how-to/how-to-configure-firewall-with-ufw-on-ubuntu-18/)

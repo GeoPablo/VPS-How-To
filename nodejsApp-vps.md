@@ -23,7 +23,8 @@
 
    - place this code
 
-   ```server {
+   ```
+   server {
     listen 80;
     server_name <YourVPSIpAddress>(www.mydomain.ro mydomain.ro);
     location / {
