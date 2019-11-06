@@ -1,11 +1,13 @@
-## Check Disk Space Command
+# Some useful commands for linux.
 
-    `df -h` - shows the amount of disk space used and available on Linux file systems in human read version
+1. Check Disk Space Command
 
-## Set timezone
+`df -h` - shows the amount of disk space used and available on Linux file systems in human read version
 
-    `sudo cp /usr/share/zoneinfo/Europe/Bucharest /etc/localtime`
+2. Set timezone
 
-## Change owner of files
+`sudo cp /usr/share/zoneinfo/Europe/Bucharest /etc/localtime`
 
-    `sudo chown -R [userName] [dirName]` - change the owner of all the files   inside that dir
+3. Change owner of files
+
+`sudo chown -R [userName] [dirName]` - change the owner of all the files inside that dir

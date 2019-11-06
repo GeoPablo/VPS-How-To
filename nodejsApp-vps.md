@@ -40,7 +40,7 @@
    nginx: configuration file /etc/nginx/nginx.conf test is successful
    ```
 
-   - `sudo ln -s /etc/nginx/sites-available/[serverName] /etc/nginx/sites-enabled` - enable your configuration; make a symbolic link
+   - `sudo ln -s /etc/nginx/sites-available/[serverName] /etc/nginx/sites-enabled/` - enable your configuration; make a symbolic link
 
    - `sudo systemctl restart nginx` - restart nginx
 
