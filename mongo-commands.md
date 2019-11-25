@@ -30,7 +30,7 @@
 
 6. Create a dump file of a database
 
-`mongodump --host="127.0.0.1:27017" -u [db_user]-p [db_pwd] -d [db_name] -o [output_path]`
+`mongodump --host="127.0.0.1:27017" -u [db_user] -p [db_pwd] -d [db_name] -o [output_path]`
 
 7. Create db from a dump file
 
@@ -39,6 +39,10 @@
 8. Print current user
 
 `db.runCommand({connectionStatus: 1})`
+
+9. Prin collections
+
+`db.runCommand( { listCollections: 1.0, nameOnly: true } )`
 
 9. Update user with restore backup db roles (only working for admin db)
 
