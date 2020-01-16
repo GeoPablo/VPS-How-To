@@ -44,13 +44,16 @@
 
 `db.runCommand( { listCollections: 1.0, nameOnly: true } )`
 
-9. Update user with restore backup db roles (only working for admin db)
+10. Update user with restore backup db roles (only working for admin db)
 
-   - connect to database with auth
-   - select the database
-   - `db.updateUser("[user-name]",{roles:[{role:"restore",db:"[db-name]"},{role:"backup",db:"[db-name]"}]});`
+- connect to database with auth
+- select the database
+- `db.updateUser("[user-name]",{roles:[{role:"restore",db:"[db-name]"},{role:"backup",db:"[db-name]"}]});`
 
-10) Delete user
+11. Delete user
 
 `use [db_name]`
 `db.dropUser("[user-name]")`
+
+12. Drop collection
+    db.[collection].drop();
