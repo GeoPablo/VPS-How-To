@@ -26,7 +26,7 @@
 
 5) Connect to a database with credentials
 
-`mongo -u db_user -p db_pwd unitbvorar_db`
+`mongo -u db_user -p db_pwd db_name`
 
 6. Create a dump file of a database
 
