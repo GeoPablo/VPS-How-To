@@ -38,3 +38,6 @@
 6. Firewall
 
 [Firewall Ubuntu 18](https://hostadvice.com/how-to/how-to-configure-firewall-with-ufw-on-ubuntu-18/)
+
+7. Auth on nginx server :80
+   [DO Nginx Auth](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)

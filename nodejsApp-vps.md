@@ -27,6 +27,8 @@
    server {
     listen 80;
     server_name <YourVPSIpAddress>(www.mydomain.ro mydomain.ro);
+    proxy_set_header X-Forwarded-For $remote_addr;
+
     location / {
         proxy_pass http://localhost:3000/;
     }}

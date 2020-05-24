@@ -48,7 +48,7 @@
 
 - connect to database with auth
 - select the database
-- `db.updateUser("[user-name]",{roles:[{role:"restore",db:"[db-name]"},{role:"backup",db:"[db-name]"}]});`
+- `db.updateUser("AdminGeorgian",{roles:[{role:"restore",db:"admin"},{role:"backup",db:"admin"},{ role: "userAdminAnyDatabase", db: "admin" }]});`
 
 11. Delete user
 
