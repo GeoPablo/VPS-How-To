@@ -46,4 +46,4 @@
 
 6. Verifying the Administrative User’s Access
 
-   `mongo -u AdminGeorgian -p --authenticationDatabase admin`
+   `mongo -u AdminSammy -p --authenticationDatabase admin`
