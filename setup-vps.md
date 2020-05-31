@@ -41,3 +41,10 @@
 
 7. Auth on nginx server :80
    [DO Nginx Auth](https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04)
+
+8) Update nginx config
+
+`sudo nano /etc/nginx/nginx.conf
+
+Uncomment `server_tokens off;`
+Update the limit of the body `client_max_body_size` ex `client_max_body_size 100M;`
