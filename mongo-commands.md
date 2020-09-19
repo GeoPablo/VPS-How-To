@@ -57,3 +57,55 @@
 
 12. Drop collection
     db.[collection].drop();
+
+# DB migration
+
+[article](https://softwareontheroad.com/database-migration-node-mongo/)
+
+1. `npm i migrate-mongo`
+2. `npx migrate-mongo init`
+
+_migrate-mongo-config.js_
+
+```js
+// In this file you can configure migrate-mongo
+const { parse } = require("dotenv");
+const { readFileSync } = require("fs");
+const env = parse(readFileSync(`./.env.${process.env.NODE_ENV}`));
+
+const config = {
+  mongodb: {
+    url: env.MONGODB_URI,
+
+    // TODO Change this to your database name:
+    // databaseName: env.mongo.dbname,
+
+    options: {
+      useNewUrlParser: true, // removes a deprecation warning when connecting
+      useUnifiedTopology: true, // removes a deprecating warning when connecting
+      //   connectTimeoutMS: 3600000, // increase connection timeout to 1 hour
+      //   socketTimeoutMS: 3600000, // increase socket timeout to 1 hour
+    },
+  },
+
+  // The migrations dir, can be an relative or absolute path. Only edit this when really necessary.
+  migrationsDir: "migrations",
+
+  // The mongodb collection where the applied changes are stored. Only edit this when really necessary.
+  changelogCollectionName: "changelog",
+
+  // The file extension to create migrations and search for in migration dir
+  migrationFileExtension: ".js",
+};
+
+// Return the config as a promise
+module.exports = config;
+```
+
+3. `npx migrate-mongo create my-migration`
+
+4. Add `"migrate:dev:up": "cross-env NODE_ENV=development migrate-mongo up"` inside `package.json` scripts
+
+5. Run `npm run migrate:dev:up`
+
+This will run all the `up` functions and it will create a collection named `changelog` to know what migrations were runned and what it should run next.
